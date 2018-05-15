@@ -1,0 +1,25 @@
+#type of situations
+HOME, WORK, CAR, FOOT, BICYCLE, TRAIN, TRAM, BUS, METRO
+
+#define macros
+AT-HOME: HOME
+IN-TRANSIT: CAR, FOOT, BICYCLE,	TRAIN, TRAM, BUS, METRO
+AT-WORK: WORK
+
+#define pattern (space separated)
+AT-HOME*1 IN-TRANSIT*1 AT-WORK IN-TRANSIT*2 AT-HOME*2
+
+#Occurrence hours
+AT-HOME*1 $ 10800:1800
+IN-TRANSIT*1 $ 25200:1800
+AT-WORK $ 43200:3600
+IN-TRANSIT*2 $ 61200:1800
+AT-HOME*2 $ 72000:1800
+
+#Expected Probability Distribution
+0.2 0.1 0.4 0.1 0.2
+
+#Expected Locations Format: "situation latitude,longitude, angle"
+AT-HOME*1 23,23,24
+AT-WORK 45,45,26
+AT-HOME*2 23,23

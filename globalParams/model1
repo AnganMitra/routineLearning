@@ -1,0 +1,10 @@
+#type of situations
+HOME, WORK, CAR, FOOT, BICYCLE, TRAIN, TRAM, BUS, METRO
+
+#define macros
+AT-HOME: HOME
+IN-TRANSIT: CAR, FOOT, BICYCLE,	TRAIN, TRAM, BUS, METRO
+AT-WORK: WORK
+
+#define pattern (space separated)
+AT-HOME*1 IN-TRANSIT*1 AT-WORK IN-TRANSIT*2 AT-HOME*2

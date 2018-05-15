@@ -1,0 +1,14 @@
+apt-get install python3-pip
+apt-get install libblas-dev liblapack-dev libatlas-base-dev gfortran
+apt-get install python-dev build-essential
+#  pip3 install --upgrade pip
+apt-get install python3-tk
+apt-get install python3-numpy
+apt-get install python3-pandas
+
+pip3 install scipy
+pip3 install matplotlib
+pip3 install setuptools
+pip3 install sklearn
+pip3 install seaborn
+pip3 install --pre xgboost
